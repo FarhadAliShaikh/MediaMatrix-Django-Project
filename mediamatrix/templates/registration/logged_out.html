@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %} Register-User {% endblock %}
+
+{% block content %}
+<h2 class='m-4'>Logged Out</h2>
+
+<p>
+    Do you have an account?
+    <a href="{% url 'login' %}">Login here</a>
+</p>
+{% endblock %}

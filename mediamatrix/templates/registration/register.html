@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %} Register-User {% endblock %}
+
+{% block content %}
+    <a href="{% url 'tweet_list' %}" class="btn btn-primary m-4">
+        Go Back
+    </a>
+    <h1 class='mx-4'>Register User</h1>
+    <form method="post" class="m-4" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-warning">
+            Submit
+        </button>
+    </form>
+    <p class="m-4">
+        Do you have an account?
+        <a href="{% url 'login' %}">Login here</a>
+    </p>
+    
+{% endblock %}
